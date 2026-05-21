@@ -1,0 +1,39 @@
+groups:
+  - name: api-alertas
+    rules:
+      # Alerta si la API deja de responder (Prometheus no la puede scrapear).
+      - alert: ApiCaida
+        expr: up{job="mi-api"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "La API no responde"
+          description: "Prometheus no puede recolectar métricas de la API desde hace 30s."
+
+      # Alerta por latencia alta: p95 por encima de 1 segundo durante 1 minuto.
+      - alert: LatenciaAlta
+        expr: |
+          histogram_quantile(
+            0.95,
+            sum by (le, endpoint) (rate(http_request_duration_seconds_bucket[5m]))
+          ) > 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latencia p95 alta en {{ $labels.endpoint }}"
+          description: "El percentil 95 de latencia supera 1s en {{ $labels.endpoint }}."
+
+      # Alerta por tasa de errores 5xx superior al 10%.
+      - alert: TasaErroresAlta
+        expr: |
+          sum(rate(http_requests_total{status=~"5.."}[5m]))
+          /
+          sum(rate(http_requests_total[5m])) > 0.1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Tasa de errores 5xx elevada"
+          description: "Más del 10% de las peticiones están devolviendo errores 5xx."
