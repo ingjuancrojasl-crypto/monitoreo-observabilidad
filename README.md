@@ -1,8 +1,8 @@
 # Monitoreo y Observabilidad — API REST con Prometheus y Grafana
 
-> **Nombre:** _[Escribe aquí tu nombre completo]_
-> **Código de estudiante:** _[Escribe aquí tu código]_
-> **Repositorio:** _[URL de tu repositorio]_
+> **Nombre:** _Juan Carlos Rojas Lizarazo_
+> **Código de estudiante:** _202222901601_
+> **Repositorio:** _https://github.com/ingjuancrojasl-crypto/monitoreo-observabilidad_
 > **Video:** _[URL de tu video]_
 
 Stack completo de monitoreo y observabilidad ejecutado con Docker Compose. Incluye una
