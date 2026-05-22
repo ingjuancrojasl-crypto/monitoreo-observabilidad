@@ -83,7 +83,8 @@ Accesos:
 | Métricas    | http://localhost:3000/metrics                                                 | —                 |
 | Prometheus  | http://localhost:9090                                                         | —                 |
 | Grafana     | http://localhost:3001/d/api-monitoring/monitoreo-de-api-
-                observabilidad?orgId=1&from=now-15m&to=now&timezone=browser&refresh=5s        | admin1 / admin1     |
+                observabilidad?orgId=1&from=now-15m&to=now&timezone=browser&refresh=5s        | admin1 / admin1   |
+                
 
 En Grafana el dashboard **"Monitoreo de API - Observabilidad"** aparece ya cargado
 (menú **Dashboards**). El datasource de Prometheus también queda configurado solo.
