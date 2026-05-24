@@ -77,12 +77,17 @@ docker-compose ps
 
 Accesos:
 
-| Servicio    | URL                                                                           | Credenciales      |
-|-------------|-------------------------------------------------------------------------------|-------------------|
-| API         | http://localhost:3000                                                         | —                 |
-| Métricas    | http://localhost:3000/metrics                                                 | —                 |
-| Prometheus  | [http://localhost:9090](http://localhost:9090/query?g0.expr=rate%28http_requests_total%5B1m%5D%29%0A&g0.show_tree=0&g0.tab=table&g0.range_input=1h&g0.res_type=auto&g0.res_density=medium&g0.display_mode=lines&g0.show_exemplars=0&g1.expr=rate%28http_request_duration_seconds_sum%5B1m%5D%29+%2F+rate%28http_request_duration_seconds_count%5B1m%5D%29&g1.show_tree=0&g1.tab=table&g1.range_input=1h&g1.res_type=auto&g1.res_density=medium&g1.display_mode=lines&g1.show_exemplars=0)| —                 |
-| Grafana     | http://localhost:3001/d/api-monitoring/monitoreo-de-api-
+| Servicio        | URL                                                                           | Credenciales      |
+|-------------    |-------------------------------------------------------------------------------|-------------------|
+| API             | http://localhost:3000                                                         | —                 |
+| API/datos       | http://localhost:3000/api/datos                                               | —                 |
+| API/lento       | http://localhost:3000/api/lento                                               | —                 |
+| API/usuarios    | http://localhost:3000/api/usuarios                                            | —                 |
+| API/usuarios/99 | http://localhost:3000/api/usuarios/99                                         | —                 |
+| API/error       | http://localhost:3000/api/error                                               | —                 |
+| Métricas        | http://localhost:3000/metrics                                                 | —                 |
+| Prometheus      | [http://localhost:9090](http://localhost:9090/query?g0.expr=rate%28http_requests_total%5B1m%5D%29%0A&g0.show_tree=0&g0.tab=table&g0.range_input=1h&g0.res_type=auto&g0.res_density=medium&g0.display_mode=lines&g0.show_exemplars=0&g1.expr=rate%28http_request_duration_seconds_sum%5B1m%5D%29+%2F+rate%28http_request_duration_seconds_count%5B1m%5D%29&g1.show_tree=0&g1.tab=table&g1.range_input=1h&g1.res_type=auto&g1.res_density=medium&g1.display_mode=lines&g1.show_exemplars=0)| —                 |
+| Grafana        | http://localhost:3001/d/api-monitoring/monitoreo-de-api-
                 observabilidad?orgId=1&from=now-15m&to=now&timezone=browser&refresh=5s        | admin1 / admin1   |
                 
 
