@@ -3,7 +3,7 @@
 > **Nombre:** _Juan Carlos Rojas Lizarazo_
 > **Código de estudiante:** _202222901601_
 > **Repositorio:** _https://github.com/ingjuancrojasl-crypto/monitoreo-observabilidad_
-> **Video:** _[URL de tu video]_
+> **Video:** _ https://youtu.be/Ihka_JOa1Eg _
 
 Stack completo de monitoreo y observabilidad ejecutado con Docker Compose. Incluye una
 API REST instrumentada con métricas en formato Prometheus, recolección con Prometheus,
